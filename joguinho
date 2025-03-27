@@ -1,0 +1,29 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	fmt.Println("Você está em um quarto escuro.")
+	fmt.Println("O que deseja fazer?")
+	fmt.Println("1 - Abrir a porta")
+	fmt.Println("2 - Acender a luz")
+
+	// Capturar a escolha do jogador
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Escolha uma opção (1 ou 2): ")
+	input, _ := reader.ReadString('\n')
+
+	// Verificar a escolha do jogador
+	switch input {
+	case "1\n":
+		fmt.Println("Você abriu a porta e viu um corredor escuro. O que fará agora?")
+	case "2\n":
+		fmt.Println("Você acendeu a luz e viu um bilhete no chão.")
+	default:
+		fmt.Println("Escolha inválida! O jogo terminou.")
+	}
+}
