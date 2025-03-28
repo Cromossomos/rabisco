@@ -3,7 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	a, b := 10, 3
+	var a, b int
+
+	fmt.Print("Digite um dos números: ")
+	fmt.Scan(&a)
+
+	fmt.Print("Digite o outro número: ")
+	fmt.Scan(&b)
+
+
 	fmt.Println("A soma é: ", a + b)
 	fmt.Println("A subtração é:", a - b)
 	fmt.Println("A divisão é:", a / b)
