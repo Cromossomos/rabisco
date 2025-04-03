@@ -1,29 +1,20 @@
 package main
-
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("Você está em um quarto escuro.")
-	fmt.Println("O que deseja fazer?")
-	fmt.Println("1 - Abrir a porta")
-	fmt.Println("2 - Acender a luz")
+	var escolha int
 
-	// Capturar a escolha do jogador
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Escolha uma opção (1 ou 2): ")
-	input, _ := reader.ReadString('\n')
+	fmt.Println("Você acorda em uma sala escura, assim que abre os olhos uma pontada de dor ecoa por toda sua cabeça e um zumbido irritante insiste em continuar por mais alguns instantes antes das luzes acenderem e você conseguir observar com mais atenção o local..")
+	fmt.Println("Esse é seu quarto! Não se sinta surpreso, por mais que você não se lembre como foi parar ai... Esse lugar ainda é familiar para seus olhos, afinal é onde você vive.")
+	fmt.Println("Você resolve se levantar, indo em direção a porta e vendo dois caminhos")
+	fmt.Println("1- Corredor da direira")
+	fmt.Println("2- Corredor da esquerda")
+	fmt.Println("Qual caminho você decide ir? (1 ou 2)")
 
-	// Verificar a escolha do jogador
-	switch input {
-	case "1\n":
-		fmt.Println("Você abriu a porta e viu um corredor escuro. O que fará agora?")
-	case "2\n":
-		fmt.Println("Você acendeu a luz e viu um bilhete no chão.")
-	default:
-		fmt.Println("Escolha inválida! O jogo terminou.")
-	}
+	fmt.Scan(&escolha)
+
+	if escolha == 1 {
+		fmt.Println("coiso")
+		fmt.Println("coiso")
+	} 
 }
